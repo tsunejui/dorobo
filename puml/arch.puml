@@ -6,7 +6,7 @@ database "s3" as db
 agent "dorobo-server" as svr
 agent "dorobo-health-checker" as checker
 package "Company Network" {
-    agent "dorobo" as c
+    agent "dorobo" as c #00ff00
     cloud "Git Rrpository" as git
 }
 

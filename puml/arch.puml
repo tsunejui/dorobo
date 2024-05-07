@@ -7,7 +7,7 @@ agent "dorobo-server" as svr
 agent "dorobo-health-checker" as checker
 package "Company Network" {
     agent "dorobo" as c #00ff00
-    cloud "Git Rrpository" as git
+    cloud "Git Repository" as git
 }
 
 c --> git : access

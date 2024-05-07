@@ -1,0 +1,28 @@
+@startuml arch
+left to right direction
+
+actor "you" as user
+database "s3" as db
+agent "dorobo-server" as svr
+agent "dorobo-health-checker" as checker
+package "Company Network" {
+    agent "dorobo" as c
+    cloud "Git Rrpository" as git
+}
+
+c --> git : access
+note top of c
+all data store in memory
+end note
+
+c --> svr : upload
+svr --> db : store
+c --> checker  : sync
+checker .> svr : monitoring
+user --> checker : set
+note right of checker
+provide the sync
+records
+end note
+
+@enduml

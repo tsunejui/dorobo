@@ -1,0 +1,14 @@
+GET http://localhost:8090/hello
+
+###
+
+GET http://localhost:8090/version
+
+###
+
+POST http://localhost:8090/update
+Content-Type: application/json
+
+{
+    "path": "bin/v2_serve"
+}
